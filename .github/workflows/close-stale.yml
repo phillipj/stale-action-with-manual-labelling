@@ -1,0 +1,17 @@
+name: "Close stale issues"
+on:
+  schedule:
+  - cron: "0 0 * * *"
+
+jobs:
+  stale:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: stale/f111c4f3856e12624651179f2d377cb31beec343
+      with:
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
+        days-before-close: 1
+        stale-pr-label: stalled
+        stale-issue-label: stalled
+        # deactivates automatic stale labelling as we prefer to do that manually
+        days-before-stale: -1
