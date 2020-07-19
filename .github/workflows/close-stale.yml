@@ -13,5 +13,6 @@ jobs:
         days-before-close: 1
         stale-pr-label: stalled
         stale-issue-label: stalled
+        remove-stale-when-updated: false
         # deactivates automatic stale labelling as we prefer to do that manually
         days-before-stale: -1
